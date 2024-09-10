@@ -1,0 +1,22 @@
+export const languages = [
+    { id: 1, lang: 'JavaScript' },
+    { id: 2, lang: 'Python' },
+    { id: 3, lang: 'Java' },
+    { id: 4, lang: 'C#' },
+    { id: 5, lang: 'C++' },
+    { id: 6, lang: 'TypeScript' },
+    { id: 7, lang: 'PHP' },
+    { id: 8, lang: 'Ruby' },
+    { id: 9, lang: 'Swift' },
+    { id: 10, lang: 'Go' },
+    { id: 11, lang: 'Kotlin' },
+    { id: 12, lang: 'R' },
+    { id: 13, lang: 'SQL' },
+    { id: 14, lang: 'Perl' },
+    { id: 15, lang: 'Objective-C' },
+    { id: 16, lang: 'Haskell' },
+    { id: 17, lang: 'Rust' },
+    { id: 18, lang: 'Dart' },
+    { id: 19, lang: 'Scala' },
+    { id: 20, lang: 'Elixir' }
+];

@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-rainbow-text {
+    background: linear-gradient(90deg, rgb(33, 123, 254) 0%, rgb(7, 142, 251) 33.53%, rgb(172, 135, 235) 67.74%, rgb(238, 77, 93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+} 
+
+
+.gradient-border {
+    background: linear-gradient(120deg, 
+      rgb(0, 100, 250) 0%,      /* Blue */
+      rgb(7, 142, 251) 16.67%,   /* Sky Blue */
+      rgb(72, 168, 255) 33.33%,  /* Lighter Blue */
+      rgb(153, 106, 235) 50%,    /* Light Purple */
+      rgb(202, 110, 223) 66.67%, /* Magenta */
+      rgb(236, 97, 111) 83.33%,   /* Pinkish Red */
+      rgb(255, 115, 128) 100%    /* Lighter Pinkish Red */
+    );
+}
+.selector{
+  background: rgba(255, 255, 255, 0.7);
+}
+.border-color {
+  background: linear-gradient(90deg, 
+      rgba(1, 84, 208, 0.95) 0%,      /* Dark Blue */
+      rgb(21, 125, 211) 50%,     /* Sky Blue */
+      rgb(72, 168, 255) 100%    /* Lighter Blue */
+  );
+}
+.border-color-text {
+  background: linear-gradient(90deg, 
+      rgba(2, 103, 255, 0.95) 0%,      /* Dark Blue */
+      rgb(66, 154, 226) 50%,     /* Sky Blue */
+      rgb(155, 207, 255) 100%    /* Lighter Blue */
+  );
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+/* src/styles/glowing-border.css */
+.glowing-border {
+  position: relative;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #1a202c; /* Background color of the div */
+  box-shadow: 0 0 10px rgba(0, 150, 255, 0.5); /* Glowing effect */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glowing-border:hover {
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.8); /* Intensified glow on hover */
+}
+
