@@ -10,7 +10,7 @@ function Footer() {
         <p className="text-lg text-white">
         © {currentYear}  Gurliv kaur bajwa
       </p>
-      <button className='text-xl'>Code <i className ="fa-solid fa-arrow-up-right-from-square "></i></button>
+      <button className='text-xl' onClick={() => window.location.href = 'https://github.com/gurliv21/Eclipse'}>Code <i className ="fa-solid fa-arrow-up-right-from-square "></i></button>
       </div>
       
     </div>

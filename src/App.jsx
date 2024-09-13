@@ -5,6 +5,7 @@ import InfoPortion from './component/InfoPortion'
 import Lang from './component/Lang'
 import Footer from './component/Footer'
 import Effect from './component/Effect'
+import { Button } from './components/ui/button'
 
 
 
@@ -28,6 +29,7 @@ function App() {
       <h2><i className="fas fa-check-circle mr-2 text-blue-500"></i>Instant Results </h2>
       <h2><i className="fas fa-check-circle mr-2 text-blue-500"></i>User Friendly </h2>
     </div>
+    
     
     
     

@@ -9,10 +9,14 @@ const app = express();
 const port = 3002;
 
 const apiKey = process.env.GEMINI_API_KEY;
+const genAI = new GoogleGenerativeAI(apiKey);
+
+const model = genAI.getGenerativeModel({
+  model: 'gemini-1.5-flash',
+});
 
 if (!apiKey) {
   console.error('API key not found. Please set GEMINI_API_KEY in your .env file.');
-  process.exit(1); // Exit if no API key is found
 }
 
 const generationConfig = {
@@ -27,20 +31,14 @@ app.use(cors());  // Enable CORS for all routes
 app.use(express.json());
 
 app.post('/gemini', async (req, res) => {
-  const genAI = new GoogleGenerativeAI(apiKey); // Initialize genAI within the route handler
-
   try {
-    const model = await genAI.getGenerativeModel({
-      model: 'gemini-1.5-flash',
-      ...generationConfig
+    const chat = model.startChat({
+      history: req.body.history,
     });
 
-    const chat = await model.startChat(); // Start chat without history
-
-    const result = await chat.sendMessage(req.body.message || 'sum of two numbers in java'); // Use default message if none provided
-    const text = await result.response.text(); // Await text response
-
-    console.log(result);
+    const result = await chat.sendMessage(req.body.message);
+    const response = await result.response;
+    const text = await response.text();
 
     res.send(text);
   } catch (error) {
