@@ -21,10 +21,10 @@ function Converter() {
   
   const prompt = `convert the given code: ${inputCode} which is in ${selectedLanguage} into ${selectedLanguage1} and give no explanation, just code.`;
 
-  console.log(prompt);
+  
   const handleConvertClick = async () => {
 
-    console.log(prompt);
+    
     try {
       const options = {
         method: 'POST',
@@ -36,7 +36,7 @@ function Converter() {
         }
       };
 
-      const apiResponse = await fetch('Server.js', options);
+      const apiResponse = await fetch('/api/server', options);
 
       let data = await apiResponse.text();
       data = data.replace(/```[a-z]*\n?/, '').replace(/\n?```$/, '');

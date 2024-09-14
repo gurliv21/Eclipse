@@ -12,6 +12,7 @@ import { Button } from './components/ui/button'
 
 function App() {
   
+  
 
   return (
     <main className='flex flex-col items-center mx-auto min-h-screen p-6 '>
@@ -23,6 +24,7 @@ function App() {
       <h3 className='text-gray-300 text-xs md:text-lg max-w-3xl'>
         Code conversion made super simple to save you hours of time from learning a completely new language.
       </h3>
+      
     </div>
     <div className='flex flex-row text-sm lg:text-xl gap-6 text-center justify-center '>
       <h2> <i className="fas fa-check-circle mr-2 text-blue-500"></i>High Accuracy</h2>
