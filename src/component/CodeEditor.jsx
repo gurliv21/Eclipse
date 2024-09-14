@@ -12,7 +12,7 @@ const CodeEditor = ({ value, onCodeChange, readOnly = false }) => {
     <div>
       <MonacoEditor
         height="506px"
-        width="438px"
+        width="100%"
         defaultLanguage="java" // Set language based on use case
         value={value} // Display the value passed from parent
         theme="vs-dark"

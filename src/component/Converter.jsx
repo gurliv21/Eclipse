@@ -49,9 +49,9 @@ function Converter() {
   };
 
   return (
-    <div className='flex flex-col sm:flex-row gap-20 p-20 lg:mb-24'>
-      <div>
-        <div className='w-[444px] h-[552px] gradient-border p-1'>
+    <div className='flex flex-col sm:flex-row gap-20 p-4 md:px-20 lg:px-36 '>
+      <div className='w-full sm:w-[50%] '>
+        <div className='w-full h-auto sm:h-[552px] gradient-border p-1'>
           <div className=' opacity-[51%]'>
           <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -82,8 +82,8 @@ function Converter() {
         </div>
       </div>
 
-      <div>
-        <div className='w-[444px] h-[552px] gradient-border overflow-auto p-1'>
+      <div className='w-full sm:w-[50%]'>
+        <div className='w-full h-auto sm:h-[552px] gradient-border overflow-auto p-1'>
           <div className=' opacity-[51%] flex justify-between'>
           <DropdownMenu>
       <DropdownMenuTrigger asChild>

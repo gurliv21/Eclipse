@@ -7,10 +7,10 @@ function Footer() {
     <div className='w-full px-12'>
         <hr className='border-white my-4 mb-12   '></hr>
         <div className='flex justify-between  '>
-        <p className="text-lg text-white">
+        <p className="text-sm md:text-xl lg:text-xl text-white">
         © {currentYear}  Gurliv kaur bajwa
       </p>
-      <button className='text-xl' onClick={() => window.location.href = 'https://github.com/gurliv21/Eclipse'}>Code <i className ="fa-solid fa-arrow-up-right-from-square "></i></button>
+      <button className='text-sm md:text-xl lg:text-xl' onClick={() => window.location.href = 'https://github.com/gurliv21/Eclipse'}>Code <i className ="fa-solid fa-arrow-up-right-from-square "></i></button>
       </div>
       
     </div>

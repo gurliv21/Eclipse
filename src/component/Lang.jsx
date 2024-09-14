@@ -11,7 +11,7 @@ function Lang() {
         </div>
 
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 transform lg:scale-[0.8]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 transform lg:mx-32 lg:scale-[0.8] " >
           <div className="flex sm:flex-col items-center justify-center p-8  rounded-lg shadow-xl transition-all duration-500 ease-in-out hover:border-2 border-gray-400" style={{ backgroundColor: 'rgba(232, 234, 237, 0.1)' }}>
             <i className="fab fa-python text-4xl text-blue-500 mr-4 sm:p-2"></i>
             <span className="text-lg font-medium">Python</span>

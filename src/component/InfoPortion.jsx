@@ -2,8 +2,15 @@ import React from 'react';
 
 function InfoPortion() {
   return (
-    <div className="min-h-screen flex justify-center items-center p-8 mb-20 lg:mb-32">
-      <div className="flex flex-col border rounded-3xl border-solid p-12 sm:p-16 lg:p-24 lg:m-4" style={{ backgroundColor: 'rgba(232, 234, 237, 0.08)' }}>
+    <div className="min-h-screen flex justify-center items-center sm:p-6 my-20 md:my-0 lg:my-32">
+      <div className="
+    flex flex-col 
+    border-0 border-solid  p-12 sm:p-16 lg:p-24 lg:m-4 
+    md:border border-gray-300 rounded-3xl
+    lg:border-2 lg:border-gray-400 rounded-3xl
+  "
+  style={{ backgroundColor: 'rgba(232, 234, 237, 0.08)' }}
+>
         <div className="flex flex-col text-center mb-20">
           <h1 className="text-3xl sm:text-5xl font-semibold mb-4">
             Why use <span className="custom-rainbow-text">Eclipse</span>
