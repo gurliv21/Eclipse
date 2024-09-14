@@ -1,12 +1,4 @@
-import express from 'express';
-import dotenv from 'dotenv';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import cors from 'cors';  
-
-dotenv.config();
-
-const app = express();
-const port = 3002;
 
 const apiKey = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
@@ -15,22 +7,15 @@ const model = genAI.getGenerativeModel({
   model: 'gemini-1.5-flash',
 });
 
-if (!apiKey) {
-  console.error('API key not found. Please set GEMINI_API_KEY in your .env file.');
-}
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
 
-const generationConfig = {
-  temperature: 1,
-  topP: 0.95,
-  topK: 64,
-  maxOutputTokens: 8192,
-  responseMimeType: 'application/json',
-};
+  if (!apiKey) {
+    return res.status(500).json({ error: 'API key not found.' });
+  }
 
-app.use(cors());  // Enable CORS for all routes
-app.use(express.json());
-
-app.post('/gemini', async (req, res) => {
   try {
     const chat = model.startChat({
       history: req.body.history,
@@ -40,13 +25,9 @@ app.post('/gemini', async (req, res) => {
     const response = await result.response;
     const text = await response.text();
 
-    res.send(text);
+    return res.status(200).send(text);
   } catch (error) {
     console.error('Error processing request:', error.message);
-    res.status(500).send('Internal Server Error: ' + error.message);
+    return res.status(500).json({ error: 'Internal Server Error: ' + error.message });
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
+}

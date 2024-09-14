@@ -36,7 +36,8 @@ function Converter() {
         }
       };
 
-      const apiResponse = await fetch('http://localhost:3002/gemini', options);
+      const apiResponse = await fetch('Server.js', options);
+
       let data = await apiResponse.text();
       data = data.replace(/```[a-z]*\n?/, '').replace(/\n?```$/, '');
 
