@@ -6,23 +6,6 @@
 
 Check out the live version of this project here: [Eclipse AI Live](https://eclipse-mu.vercel.app)
 
-## Technologies Used
 
-- **Frontend**: 
-  - React 
-  - Tailwind CSS 
-  - Framer Motion 
-  - clsx 
-  - tailwind-merge
-
-- **Code Editor**: 
-  - Monaco Editor
-
-- **Backend** (if applicable): 
-  - Node.js 
-  - Express
-
-- **Deployment**: 
-  - Vercel
     
 
